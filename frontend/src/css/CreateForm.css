@@ -1,0 +1,23 @@
+.form-new-team{
+
+}
+.choose-member-level{
+    margin-left: 2px;
+}
+.form-label{
+    font-weight: bold;
+}
+
+body{
+    background-color: #f8f9fa;
+}
+
+.form-row{
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+}
+.input-teams{
+    width: 14%;
+}
+

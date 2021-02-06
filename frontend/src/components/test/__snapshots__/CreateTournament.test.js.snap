@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot of CreateTournament 1`] = `
+<div
+  className="bg-light"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="p-5 text-center"
+    >
+      <h1
+        className="mb-3"
+      >
+        Create your Tournament
+      </h1>
+    </div>
+    <form
+      className="form-new-team"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="tournamentNameId"
+        >
+          Name of your Tournament
+        </label>
+        <input
+          className="form-control"
+          data-testid="tournament-name"
+          id="tournamentNameId"
+          onChange={[Function]}
+          placeholder="Tournament Name"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label form-label"
+        >
+          Tournament Type
+        </label>
+        <div>
+          <select
+            className="form-control"
+            data-testid="select"
+            id="tournament-type"
+            name="tournament-type"
+            onChange={[Function]}
+            required={true}
+          >
+            <option
+              data-testid="select-option"
+              value="Single KO"
+            >
+              Single KO
+            </option>
+            <option
+              data-testid="select-option"
+              value="Double KO"
+            >
+              Double KO
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label form-label"
+        >
+          Best-Of-Mode
+        </label>
+        <div
+          className="choose-member-level"
+        >
+          <div
+            className="form-check form-check-inline"
+          >
+            <input
+              className="form-check-input"
+              data-testid="best-of-1-option"
+              id="inlineCheckbox1"
+              name="radio"
+              onChange={[Function]}
+              required={true}
+              type="radio"
+              value="Best of 1"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="inlineCheckbox1"
+            >
+              Best of 1
+            </label>
+          </div>
+          <div
+            className="form-check form-check-inline"
+          >
+            <input
+              className="form-check-input"
+              data-testid="best-of-3-option"
+              id="inlineCheckbox2"
+              name="radio"
+              onChange={[Function]}
+              required={true}
+              type="radio"
+              value="Best of 3"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="inlineCheckbox2"
+            >
+              Best of 3
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label form-label"
+        >
+          Bracket Size
+        </label>
+        <div>
+          <select
+            className="form-control"
+            data-testid="select-bracket"
+            id="tournament-size"
+            name="tournament-size"
+            onChange={[Function]}
+          >
+            <option
+              data-testid="bracket-option"
+              value="4"
+            >
+              4
+            </option>
+            <option
+              data-testid="bracket-option"
+              value="8"
+            >
+              8
+            </option>
+            <option
+              data-testid="bracket-option"
+              value="16"
+            >
+              16
+            </option>
+          </select>
+        </div>
+      </div>
+      <label
+        className="form-label form-label"
+        htmlFor="teamSelectionId"
+      >
+        Insert your Teams
+      </label>
+      <div>
+        <div>
+          <div
+            className="input-group"
+            data-testid="teams"
+          >
+            <input
+              className="input-teams form-control"
+              data-testid="team-input1"
+              id="0"
+              onChange={[Function]}
+              placeholder="Team 1"
+              required={true}
+              type="text"
+              value=""
+            />
+            <input
+              className="input-teams form-control"
+              data-testid="team-input2"
+              id="1"
+              onChange={[Function]}
+              placeholder="Team 2"
+              required={true}
+              type="text"
+              value=""
+            />
+            <input
+              className="input-teams form-control"
+              data-testid="team-input3"
+              id="2"
+              onChange={[Function]}
+              placeholder="Team 3"
+              required={true}
+              type="text"
+              value=""
+            />
+            <input
+              className="input-teams form-control"
+              data-testid="team-input4"
+              id="3"
+              onChange={[Function]}
+              placeholder="Team 4"
+              required={true}
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="input-group"
+            >
+              <input
+                className="input-teams form-control"
+                data-testid="team-input5"
+                id="4"
+                onChange={[Function]}
+                placeholder="Team 5"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input6"
+                id="5"
+                onChange={[Function]}
+                placeholder="Team 6"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input7"
+                id="6"
+                onChange={[Function]}
+                placeholder="Team 7"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input8"
+                id="7"
+                onChange={[Function]}
+                placeholder="Team 8"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="input-group"
+            >
+              <input
+                className="input-teams form-control"
+                data-testid="team-input9"
+                id="8"
+                onChange={[Function]}
+                placeholder="Team 9"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input10"
+                id="9"
+                onChange={[Function]}
+                placeholder="Team 10"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input11"
+                id="10"
+                onChange={[Function]}
+                placeholder="Team 11"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input12"
+                id="11"
+                onChange={[Function]}
+                placeholder="Team 12"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="input-group"
+            >
+              <input
+                className="input-teams form-control"
+                data-testid="team-input13"
+                id="12"
+                onChange={[Function]}
+                placeholder="Team 13"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input14"
+                id="13"
+                onChange={[Function]}
+                placeholder="Team 14"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input15"
+                id="14"
+                onChange={[Function]}
+                placeholder="Team 15"
+                type="text"
+                value=""
+              />
+              <input
+                className="input-teams form-control"
+                data-testid="team-input16"
+                id="15"
+                onChange={[Function]}
+                placeholder="Team 16"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="form-group"
+      >
+        <div
+          className="row form-row"
+        >
+          <div
+            className="col-2 d-flex justify-content-center"
+          >
+            <a
+              className="btn btn-primary btn-lg btn btn-primary"
+              data-testid="submit-button"
+              disabled={false}
+              href="/tournament"
+              onClick={[Function]}
+              type="submit"
+            >
+              Create
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

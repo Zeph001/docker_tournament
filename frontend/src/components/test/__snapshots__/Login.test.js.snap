@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div
+  id="div1"
+>
+  <div
+    className="ui center aligned middle aligned grid"
+    style={
+      Object {
+        "height": "100vh",
+      }
+    }
+  >
+    <div
+      className="column"
+      style={
+        Object {
+          "maxWidth": 450,
+        }
+      }
+    >
+      <h2
+        className="ui green center aligned header"
+      >
+        Log-in to your account
+      </h2>
+      <form
+        className="ui large form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="ui stacked segment"
+        >
+          <div
+            className="required field"
+          >
+            <div
+              className="ui fluid left icon input"
+              data-testid="email-input"
+            >
+              <input
+                aria-describedby={null}
+                autoComplete="username"
+                id="userEmail"
+                name="email"
+                onChange={[Function]}
+                placeholder="E-mail address"
+                required={true}
+                type="text"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                className="user icon"
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+          <div
+            className="required field"
+          >
+            <div
+              className="ui left icon input"
+              data-testid="password-input"
+            >
+              <input
+                aria-describedby={null}
+                autoComplete="current-password"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                required={true}
+                type="password"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                className="lock icon"
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+          <button
+            className="ui green large fluid button"
+            id="loginButton"
+            onClick={[Function]}
+          >
+            Login
+          </button>
+        </div>
+      </form>
+      <a
+        className="ui grey small fluid top attached button"
+        href="/register"
+        id="to-register"
+        onClick={[Function]}
+        role="button"
+      >
+        New to us?
+      </a>
+    </div>
+  </div>
+</div>
+`;

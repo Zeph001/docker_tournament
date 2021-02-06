@@ -1,0 +1,12 @@
+
+.team-header{
+    height: 100px;
+}
+
+.main-row{
+    height: 600px;
+    background-color: lightgrey;
+}
+.main-col{
+    border: 1px solid black;
+}

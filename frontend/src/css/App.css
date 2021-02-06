@@ -1,0 +1,229 @@
+body {
+    padding-top: 47px;
+}
+
+.app{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+
+.tournament-name{
+    align-self: center;
+}
+.formLogin{
+    margin: 0 auto;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+
+.formRegister{
+    margin: 0 auto;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+.formGroup{
+    text-align: center;
+}
+.jumbotronDashboard{
+    margin: auto 0 ;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.font-dashboard{
+color: white;
+}
+.headerDashboard{
+    margin: auto 0 ;
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Avenir Next";
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    padding-bottom: 7%;
+}
+.ui.huge.primary.button  {
+    margin-top: 10px;
+    background-color: green;
+}
+.ui.huge.button  {
+    margin-top: 10px;
+}
+.dashboardBackground{
+    background-color: #202020;
+    margin: auto;
+    padding-bottom: 30%;
+}
+
+.dashboardImageBackground {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/zL729kyXcGRWB7k4rPo7tZ.jpg");
+    padding-bottom: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoutButtonDashboard{
+    position:absolute;
+    top:50px;
+    right:0;
+}
+
+logoutButton{
+    background-color: red;
+}
+
+.headerPopUp{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Avenir Next";
+
+}
+
+.contentPopUp {
+    text-align: center;
+    font-family: "Avenir Next";
+    font-size: 22px;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.popUpBtn {
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+
+}
+.repeatTournamentBtn{
+    color: green;
+
+}
+
+.tournamentHeader {
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+.startTournament {
+    padding-top: 2%;
+}
+
+.reset-tournament {
+    padding-right: 10px;
+}
+.popWindow {
+    background-color: whitesmoke;
+
+}
+
+.selectionParticipant {
+    padding-bottom: 15px;
+}
+
+.my-container{
+    /*border: 1px solid black;*/
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.my-row{
+    height: 70px;
+    /*border: 1px solid red;*/
+    padding: 5px;
+}
+
+.dko-row {
+    height: 50px;
+    border: 1px solid red;
+}
+.header-row{
+    /*border: 1px solid red;*/
+    height: 90px;
+}
+
+.labelDropdown {
+    Display: block;
+}
+.header-col {
+    height: 90%;
+    display: flex;
+    font-family: "Avenir";
+    font-size: large;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.my-col{
+    border: 2px solid black;
+    background-color: antiquewhite;
+    height: 90%;
+    margin: 2px;
+    display: flex;
+    border-radius: 20px;
+    font-family: "Avenir Next";
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+
+    transition: box-shadow .3s;
+
+}
+
+.loser-col {
+    background-color: lightgrey;
+}
+.my-col:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.col-input {
+    Display: inline-block;
+    background-color: lightgrey;
+    height: 90%;
+    display: flex;
+    font-family: "Avenir Next";
+    align-items: center;
+    justify-content: center;
+}
+
+.dko-col{
+    border: 2px solid black;
+    background-color: antiquewhite;
+    height: 90%;
+    margin: 5px;
+    display: flex;
+    border-radius: 20px;
+    font-family: "Avenir Next";
+    font-size: 12px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui.dropdown {
+    margin-left: 2px;
+}
+
+.right-col{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.left-col{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.item {
+    align-self: auto;
+}
+
+
+
+
