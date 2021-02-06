@@ -9,6 +9,7 @@
 $ git clone https://gitlab.cs.hs-rm.de/tigerson/wahlprojekt/dockerproject.git && cd dockerproject
 
 # Setup
+docker-compose build
 $ docker-compose run frontend yarn
 $ docker-compose run backend bundle exec rake db:create
 $ docker-compose run backend bundle exec rake db:migrate
@@ -19,6 +20,8 @@ $ docker-compose up -d
 ```
 
 #### Backend Test
+`docker-compose run backend bundle exec rspec spec --format documentation`
+
 ###### Container ID des Backends raussuchen
 ```shell
 $ docker ps
