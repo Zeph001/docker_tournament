@@ -1,5 +1,5 @@
 # Prerequisites
-[Docker]( https://docs.docker.com/get-docker/)
+* [Docker]( https://docs.docker.com/get-docker/)
 - Installation testen
     `docker-compose --version`
 
