@@ -55,5 +55,5 @@ Save password and hit save. Connect to the server by double clicking it on the B
 If you have troubles contact me @sdaya001
 
 #### Frontend Test
-1. Run "npm test" in command line
+1. $ npm test
 2. Afterwards press "a" to run all tests
