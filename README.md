@@ -51,4 +51,4 @@ Password: secret
 ```
 Save password and hit save. Connect to the server by double clicking it on the Browser and view the tables in the schemas.
 
-
+If you have troubles contact me @sdaya001
