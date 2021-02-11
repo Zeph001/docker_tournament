@@ -7,7 +7,7 @@ end
 
 class User < ApplicationRecord
   include ActiveModel::Validations
-  attr_accessor :username, :email
+  #attr_accessor :username, :email
 
   enum rank: [:default, :iron, :bronze, :silver, :gold, :platinum, :diamond, :master, :grandmaster, :challenger]
   
@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   #Validations
   validates :email, presence: true, email: true
-  validates :username, presence: true, uniqueness: true, length: 4..20
+  #validates :username, presence: true, uniqueness: true, length: 4..20
   
   validates :password, length: 6..30
 

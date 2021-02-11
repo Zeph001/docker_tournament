@@ -19,24 +19,26 @@ $ docker-compose run backend bundle exec rake db:migrate
 $ docker-compose up -d
 ```
 
+## Stop
+```shell
+$ docker-compose down
+```
+
 #### Backend Test
-###### Get the container ID of the backend with
+###### Linux
 ```shell
-$ docker ps
-```
-###### Create a bash or command line to the backend with
-```shell
-# docker exec -it <backend container id or name> /bin/bash
+$ docker ps # get the backend container id
+# docker exec -it <container name or id> <command>
 $ docker exec -it backend /bin/bash
-```
-###### Setup the test database
-```shell
 $ rake db:migrate RAILS_ENV=test
-```
-###### start the backend tests 
-```shell
 $ bundle exec rspec --format documentation
 ```
+###### Windows
+```shell
+docker exec -it backend rake db:migrate RAILS_ENV=test
+docker exec -it backend bundle exec rspec --format documentation
+```
+
 #### Access Database via pgadmin
 1. Go to http://localhost:8080/
 2. Enter username: admin@docker.com and password: secret 
