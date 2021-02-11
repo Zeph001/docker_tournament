@@ -36,9 +36,14 @@ $ bundle exec rspec --format documentation
 ```
 ###### Windows
 ```shell
-$ docker exec -it backend rake db:migrate RAILS_ENV=test
-$ docker exec -it backend bundle exec rspec --format documentation
+docker exec -it backend rake db:migrate RAILS_ENV=test
+docker exec -it backend bundle exec rspec --format documentation
 ```
+#### Frontend Test
+```shell
+$ npm test
+```
+Afterwards press "a" to run all tests
 
 #### Access Database via pgadmin
 1. Go to http://localhost:8080/
@@ -57,8 +62,4 @@ Save password and hit save. Connect to the server by double clicking it on the B
 
 If you have troubles contact me @sdaya001
 
-#### Frontend Test
-```shell
-$ npm test
-```
-Afterwards press "a" to run all tests
+
