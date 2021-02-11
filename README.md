@@ -28,7 +28,9 @@ $ docker-compose down
 
 #### Backend Test
 ```shell
+# First time: setup the test database
 docker exec -it backend rake db:migrate RAILS_ENV=test
+
 docker exec -it backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
