@@ -42,7 +42,7 @@ docker exec -it backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
 ```shell
-$ npm test
+$ docker exec -it frontend npm test
 ```
 Afterwards press "a" to run all tests
 
