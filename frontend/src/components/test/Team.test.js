@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom'
 import React from "react";
 import Team from "../Team";
 import renderer from "react-test-renderer";
-import {BrowserRouter} from "react-router-dom";
 
 
 test("matches the snapshot of CreateTournament", () =>{

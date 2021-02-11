@@ -6,6 +6,7 @@ import renderer from "react-test-renderer";
 import {BrowserRouter} from "react-router-dom";
 import CreateTeam from "../CreateTeam";
 import App from "../App";
+import Community from "../Community";
 
 let container;
 let getRandomInt;
@@ -20,7 +21,6 @@ afterEach(() => {
   container = null;
 });
 
-
 test('gives random integers given a maximum number -> used to distribute the teams', () => {
   const getRandomInt = TournamentBracket.prototype.getRandomInt
   expect(getRandomInt(1)).toBe(0)
@@ -29,16 +29,3 @@ test('gives random integers given a maximum number -> used to distribute the tea
   expect(getRandomInt(100)).toBeLessThanOrEqual(99)
 })
 
-
-//TODO
-
-// test("renders without crashing", () => {
-//   const div = document.createElement("div")
-//   ReactDOM.render(<TournamentBracket
-//     tournamentName = {"Test Tournament Name"}
-//     numOfSeeds = {"4"}
-//     singleKO = {true}
-//     doubleKO = {false}
-//     bestOf3 = {false}
-//   />, div)
-// })

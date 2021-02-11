@@ -153,6 +153,7 @@ updateTournamentName(e) {
         </div>
       )
   }
+
   render() {
     return (
       <div className="bg-light">

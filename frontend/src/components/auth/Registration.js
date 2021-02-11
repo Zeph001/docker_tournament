@@ -9,6 +9,7 @@ import {
   Header,
   Segment,
 } from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
 export default class Registration extends Component {
   constructor(props) {
@@ -92,7 +93,7 @@ export default class Registration extends Component {
                   data-testid = "password-input"
                   id ="passwordId"
                   iconPosition="left"
-                  placeholder="Password"
+                  placeholder="Password (6 - 30 character)"
                   type="password"
                   name="password"
                   value={this.state.password}
@@ -118,6 +119,9 @@ export default class Registration extends Component {
                 </Button>
               </Segment>
             </Form>
+            <Button id= "to-login" color="grey" fluid size="small" attached="top" as={Link} to ="/login">
+              Do you have already an Account?
+            </Button>
           </Grid.Column>
         </Grid>
       </div>

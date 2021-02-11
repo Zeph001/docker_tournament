@@ -37,14 +37,13 @@ export default class Dashboard extends Component {
       <div>
         <div className="dashboardBackground">
           <div>
-            <h1> </h1>
-            <h1 className="font-dashboard">
-              Status: {this.props.loggedInStatus}{" "}
-            </h1>
-            <p className="font-dashboard">User: {this.props.user}</p>
-              <div className="">
-                {this.logoutButton(this.props.loggedInStatus)}
+            <div className="row">
+              <div className="col">
+                <div>{this.logoutButton(this.props.loggedInStatus)} </div>
               </div>
+            </div>
+            <p className="font-dashboard">User: {this.props.user}</p>
+
           </div>
           <div className="jumbotronDashboard">
               <h1 className="headerDashboard">Create your own Tournament</h1>
@@ -64,8 +63,8 @@ export default class Dashboard extends Component {
                 <h2 className="font-dashboard">and invite your friends</h2>
               <Button data-testid ="tournament-teams-btn"
                       id ="tournament-team-btn"
-                      as={Link}
-                      to="/tournament/new"
+                      // as={Link}
+                      // to="/tournament/new"
                       className="ui huge orange button">Create
               </Button>
               </div>

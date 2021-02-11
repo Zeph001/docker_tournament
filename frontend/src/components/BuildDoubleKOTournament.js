@@ -4,7 +4,7 @@ import 'reactjs-popup/dist/index.css';
 import "../css/App.css";
 import "bootstrap/dist/css/bootstrap-reboot.min.css";
 
-//builds the double-KO tournament structure
+//builds the double-KO tournament structure with Bootstrap-Grid
 function BuildDoubleKOTournament(props) {
   let arrNames = props.names
   if(arrNames.length >= 4 && props.numOfSeeds === "4" && props.doubleKO) {
@@ -327,6 +327,8 @@ function BuildDoubleKOTournament(props) {
         </div>
       </div>
     )
+  }else if(arrNames.length >= 16 && props.numOfSeeds === "16" && props.doubleKO) {
+   return <h1>Coming soon!</h1>
   }
 }
 

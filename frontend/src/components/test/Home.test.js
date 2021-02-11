@@ -1,4 +1,4 @@
-import {act, render, screen} from '@testing-library/react';
+import {act} from '@testing-library/react';
 import Home from '../Home';
 import ReactDOM from 'react-dom'
 import React from "react";

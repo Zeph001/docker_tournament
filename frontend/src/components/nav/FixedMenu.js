@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import {
   Container,
-  Dropdown,
   Icon,
   Menu,
 } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
+
 export default class FixedMenu extends Component {
-  state = { activeItem: "" };
+  state = { activeItem: ""};
 
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
@@ -19,7 +19,7 @@ export default class FixedMenu extends Component {
 
     return (
       <div>
-        <Menu fixed="top" inverted widths="6">
+        <Menu className="nav-bar" fixed="top" inverted widths="6">
           <Container >
             <Menu.Item header>
               <Icon
@@ -30,27 +30,6 @@ export default class FixedMenu extends Component {
               />
               Project T
             </Menu.Item>
-            <Menu.Item
-              as={NavLink}
-              exact to="/"
-              name="home"
-              active={activeItem === "home"}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              as={NavLink}
-              exact to="/login"
-              name="login"
-              active={activeItem === "login"}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              as={NavLink}
-              exact to="/register"
-              name="register"
-              active={activeItem === "register"}
-              onClick={this.handleItemClick}
-            />
             <Menu.Item
               as={NavLink}
               exact to="/dashboard"
@@ -66,23 +45,12 @@ export default class FixedMenu extends Component {
               onClick={this.handleItemClick}
             />
 
-            <Dropdown item simple text="Dropdown">
-              <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Header>Header Item</Dropdown.Header>
-                <Dropdown.Item>
-                  <i className="dropdown icon" />
-                  <span className="text">Submenu</span>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown.Item>
-                <Dropdown.Item>List Item</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <Menu.Item style={{display: (this.props.loggedInStatus === "NOT_LOGGED_IN" ? 'block' : 'none')}}
+                       as={NavLink}
+                       exact to="/login"
+                       active={activeItem === "login"}
+                       onClick={this.handleItemClick}
+            > Login/Register </Menu.Item>
           </Container>
         </Menu>
       </div>

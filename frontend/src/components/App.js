@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
 import axios from "axios";
@@ -77,12 +77,6 @@ export default class App extends Component {
     });
   }
 
-  handleRedirect() {
-    if(this.state.loggedInStatus === "NOT_LOGGED_IN") {
-      this.props.history.push("/login");
-    }
-  }
-
   render() {
     return (
       <div>
@@ -127,6 +121,7 @@ export default class App extends Component {
                   {...props}
                   handleSuccessfulAuth={this.handleSuccessfulAuth}
                 />
+
               )}
             />
             <Route
@@ -144,41 +139,47 @@ export default class App extends Component {
               exact
               path={"/tournament"}
               render={(props) => (
+                this.state.loggedInStatus === "LOGGED_IN"?
                 <TournamentBracket
                   {...props}
                />
+               : <Redirect to={'/login'} />
               )}
             />
             <Route
               exact
               path={"/community"}
               render={() => (
-                <Community
-                />
+                this.state.loggedInStatus === "LOGGED_IN"?
+                  <Community
+                  />
+                  : <Redirect to={'/login'} />
               )}
             />
             <Route
               exact
               path={"/community/team"}
               render={() => (
-                <Team
-                />
+                  <Team
+                  />
               )}
             />
             <Route
               exact
               path={"/community/new"}
               render={() => (
-                <CreateTeam
-                />
+                  <CreateTeam
+                  />
               )}
             />
             <Route
               exact
               path={"/tournament/new"}
               render={() => (
+                this.state.loggedInStatus === "LOGGED_IN"?
                 <CreateTournament
                 />
+                : <Redirect to={'/login'} />
               )}
             />
           </Switch>

@@ -37,7 +37,7 @@ function PopUpInput(props) {
 }
 
 /**
- * This is the class for the Tournament Bracket
+ * This class renders the Tournament brackets with
  */
 export default class TournamentBracket extends Component {
   constructor(props) {
@@ -218,7 +218,6 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  //changes the Best of Mode
   handleChangeOfBestOfMode(e) {
     let newTournamentForm = e.target.value;
     if(newTournamentForm === "undefined") {
@@ -232,7 +231,7 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  //updates the number of the chosen seeds
+  //updates the number of the seeds
   handleChangeOfBracketSize(e) {
     console.log("in change bracket size")
     let newNum = e;
@@ -269,7 +268,7 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  // event handler for click on column
+  // event handler for click on Team
   // it decides where the winner and loser of the match goes next
   handleNextRound(event) {
    let arrNames = this.state.names
@@ -280,15 +279,14 @@ export default class TournamentBracket extends Component {
    console.log(this.state.names)
    let arrWinner = this.state.winnerArray
 
-  //we look if the clicked column has any content
 if(winner.innerText !== "" && (this.state.singleKO
   || this.state.doubleKO) && (this.state.bestOf3 !== true || (this.state.bestOf3 && arrWinner.includes(idOfColumn)))) {
-  let keyWinner; //key of winner team
-  let keyLoser; //key of loser team
-  if(idOfColumn.length === 5) {   //if the length of the ID is 5 it means that the id has only one digit e.g. "team1"
-    keyWinner = parseInt(idOfColumn.slice(-1)) //we slice the last letter (digit) and parse it for the comparison
-  } else if(idOfColumn.length === 6) { //if the ID is 6 it means that there are 2 digits in the id e.g. "team13"
-    keyWinner = parseInt(idOfColumn.slice(-2)) //we slice the last 2 letters => and then we parse it to an INT for the comparison later
+  let keyWinner;
+  let keyLoser;
+  if(idOfColumn.length === 5) {
+    keyWinner = parseInt(idOfColumn.slice(-1))
+  } else if(idOfColumn.length === 6) {
+    keyWinner = parseInt(idOfColumn.slice(-2))
   }
   let pickedTeam = document.getElementById(idOfColumn)
 
@@ -498,7 +496,7 @@ if(winner.innerText !== "" && (this.state.singleKO
 
   render() {
     return (
-      <div className="bracketMaker">
+      <div className="bracketBuilder">
         <div id = "heading" className="heading" style={{backgroundColor: "whitesmoke"}}>{this.renderInput()}</div>
         <div className = "tournamentBootstrap">{this.renderSingleKOBracket()}</div>
         <div className = "doubleKOTournament">{this.renderDoubleKOBracket()}</div>

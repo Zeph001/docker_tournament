@@ -11,25 +11,18 @@ import {shallow, configure, mount} from 'enzyme'
 
 configure({ adapter: new Adapter() });
 
-let wrapper
+
 beforeEach(() => {
-  wrapper = mount(shallow(<Registration/>).get(0))
+
 });
 
 afterEach(() => {
   jest.clearAllMocks();
 });
 
-const setup = () => {
-  const utils = render(<Registration />)
-  return {
-    ...utils,
-  }
-}
-
 test("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<Registration/>, div)
+  ReactDOM.render(<BrowserRouter> <Registration/> </BrowserRouter>, div)
 })
 
 describe('simulate the input fields', () =>{
