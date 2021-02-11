@@ -19,6 +19,7 @@ $ docker-compose run backend bundle exec rake db:migrate
 # Option -d to run the containers in the background
 $ docker-compose up -d
 ```
+http://localhost:3000/
 
 ## Stop
 ```shell
@@ -26,24 +27,16 @@ $ docker-compose down
 ```
 
 #### Backend Test
-###### Linux
 ```shell
-$ docker ps # get the backend container id
-# docker exec -it <container name or id> <command>
-$ docker exec -it backend /bin/bash
-$ rake db:migrate RAILS_ENV=test
-$ bundle exec rspec --format documentation
-```
-###### Windows
-```shell
+# First time: setup the test database
 docker exec -it backend rake db:migrate RAILS_ENV=test
+
 docker exec -it backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
 ```shell
-$ npm test
+$ docker exec -it frontend npm test
 ```
-Afterwards press "a" to run all tests
 
 #### Access Database via pgadmin
 1. Go to http://localhost:8080/
