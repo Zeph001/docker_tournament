@@ -19,6 +19,7 @@ $ docker-compose run backend bundle exec rake db:migrate
 # Option -d to run the containers in the background
 $ docker-compose up -d
 ```
+http://localhost:3000/
 
 ## Stop
 ```shell
