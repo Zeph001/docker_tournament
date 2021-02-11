@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #root 'pages#index'
-  
+  resources :teams, only: [:index]
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
   delete :logout, to: "sessions#logout"

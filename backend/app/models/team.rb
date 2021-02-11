@@ -6,6 +6,11 @@ class Team < ApplicationRecord
 
     has_and_belongs_to_many :tournaments #, :dependent => :destroy
 
-    validates_uniqueness_of :name
-    validates_presence_of :name
+    
+    validates(
+        :name,
+        presence: true,
+        :uniqueness => { :case_sensitive => false },
+        length: 6..20
+    ) 
 end
