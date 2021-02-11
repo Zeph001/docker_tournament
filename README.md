@@ -1,6 +1,6 @@
 # Prerequisites
 * [Docker]( https://docs.docker.com/get-docker/)
-    - Installation testen
+    - test your installation with
     `docker-compose --version`
 
 
@@ -20,19 +20,19 @@ $ docker-compose up -d
 ```
 
 #### Backend Test
-###### Container ID des Backends raussuchen
+###### Get the container ID of the backend with
 ```shell
 $ docker ps
 ```
-###### Bash auf das backend erstellen
+###### Create a bash or command line to the backend with
 ```shell
 $ docker exec -it <backend container id> /bin/bash
 ```
-###### Test Datenbank setup
+###### Setup the test database
 ```shell
 $ rake db:migrate RAILS_ENV=test
 ```
-###### Tests starten
+###### start the backend tests 
 ```shell
 $ bundle exec rspec --format documentation
 ```
