@@ -93,26 +93,14 @@ export default class App extends Component {
               exact
               path={"/"}
               render={(props) => (
-                <Home
+                <Dashboard
                   {...props}
-                  handleLogin={this.handleLogin}
                   handleLogout={this.handleLogout}
                   loggedInStatus={this.state.loggedInStatus}
-                /> //... -> takes all props
+                  user={this.state.user.email}
+                />
               )}
             />
-            <Route
-            exact
-            path={"/dashboard"}
-            render={(props) => (
-              <Dashboard
-                {...props}
-                handleLogout={this.handleLogout}
-                loggedInStatus={this.state.loggedInStatus}
-                user={this.state.user.email}
-              />
-            )}
-          />
             <Route
               exact
               path={"/register"}

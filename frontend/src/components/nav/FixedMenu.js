@@ -32,7 +32,7 @@ export default class FixedMenu extends Component {
             </Menu.Item>
             <Menu.Item
               as={NavLink}
-              exact to="/dashboard"
+              exact to="/"
               name="dashboard"
               active={activeItem === "dashboard"}
               onClick={this.handleItemClick}
