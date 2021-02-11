@@ -36,6 +36,19 @@ $ rake db:migrate RAILS_ENV=test
 ```shell
 $ bundle exec rspec --format documentation
 ```
-
+#### Access Database via pgadmin
+1. go to http://localhost:8080/
+2. enter username: admin@docker.com and password: secret 
+3. In the Browser select Servers > Create > Server
+4. On the General Tab enter whatever name you wish
+5. In the connection tab enter 
+```
+hostname: psql-server
+port: 5432
+Maintenance Database: postgres
+Username: admin
+Password: secret
+```
+Save password and hit save. Connect to the server by double clicking it on the Browser and view the tables in the schemas.
 
 
