@@ -35,7 +35,7 @@ $ docker exec -it backend /bin/bash
 $ rake db:migrate RAILS_ENV=test
 $ bundle exec rspec --format documentation
 ```
-###### Windows
+###### OS ohne /bin/bash
 ```shell
 docker exec -it backend rake db:migrate RAILS_ENV=test
 docker exec -it backend bundle exec rspec --format documentation
