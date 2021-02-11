@@ -44,7 +44,6 @@ docker exec -it backend bundle exec rspec --format documentation
 ```shell
 $ docker exec -it frontend npm test
 ```
-Afterwards press "a" to run all tests
 
 #### Access Database via pgadmin
 1. Go to http://localhost:8080/
