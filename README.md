@@ -16,6 +16,7 @@ $ docker-compose run backend bundle exec rake db:migrate
 ```
 ## Start
 ```shell
+# Option -d to run the containers in the background
 $ docker-compose up -d
 ```
 
