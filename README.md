@@ -26,7 +26,8 @@ $ docker ps
 ```
 ###### Create a bash or command line to the backend with
 ```shell
-$ docker exec -it <backend container id> /bin/bash
+# docker exec -it <backend container id or name> /bin/bash
+$ docker exec -it backend /bin/bash
 ```
 ###### Setup the test database
 ```shell
