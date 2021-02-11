@@ -36,8 +36,8 @@ $ bundle exec rspec --format documentation
 ```
 ###### Windows
 ```shell
-docker exec -it backend rake db:migrate RAILS_ENV=test
-docker exec -it backend bundle exec rspec --format documentation
+$ docker exec -it backend rake db:migrate RAILS_ENV=test
+$ docker exec -it backend bundle exec rspec --format documentation
 ```
 
 #### Access Database via pgadmin
