@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    container_name: postgres
+    #container_name: postgres
     image: postgres
     volumes:
       - db-data:/var/lib/postgresql/data
@@ -14,7 +14,7 @@ services:
     ports:
       - "5432:5432"
   pgadmin:
-    container_name: pgadmin4
+    #container_name: pgadmin4
     image: dpage/pgadmin4
     environment: 
       PGADMIN_DEFAULT_EMAIL: admin@docker.com
@@ -30,7 +30,7 @@ services:
     depends_on: 
       - db
   backend:
-    container_name: backend
+    #container_name: backend
     build: ./backend
     command: bundle exec rails s -b 0.0.0.0 -p 3001
     volumes:
@@ -40,7 +40,7 @@ services:
     depends_on:
       - db
   frontend:
-    container_name: frontend
+    #container_name: frontend
     build: ./frontend
     command: ["npm", "start"]
     volumes:
