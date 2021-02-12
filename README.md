@@ -6,7 +6,7 @@
 
 # Installation
 ```shell
-$ git clone https://github.com/Zeph001/docker_tournament.git && cd docker_tournament
+$ git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournament
 
 # Setup
 $ docker-compose build
