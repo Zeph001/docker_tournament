@@ -60,10 +60,11 @@ docker-compose down
 ### Windows
 * If you get the error `"bash\r" No such file or directory`. [Fix](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)
   This is because of the line-formatting difference between Unix and Windows style.
-  To fix this make Git check out files with unix-style file endings on windows use:
+  To fix this temporarily make Git check out files with unix-style file endings on windows use:
    1. `git config --global core.autocrlf false`
    2. Run git clone again
-   3. Go to Installation Section again
+   3. `git config --global core.autocrlf true`
+   4. Go to Installation Section again and continue the Setup
 
 * If you get a TypeError, when navigating to the Dashboard.
   This is because you have logged in with an improper User Account
