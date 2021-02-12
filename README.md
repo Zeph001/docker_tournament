@@ -5,12 +5,12 @@
 
 
 # Installation
-For windows installation run `git config --global core.autocrlf false` before using git clone (see Troubleshooting under Windows for detailed information)
+For temporarily fix windows installation run `git config --global core.autocrlf false` before using git clone (see Troubleshooting under Windows for detailed information).  And restore gits old behaviour by running `git config --global core.autocrlf true`
 ```shell
 git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournament
 
 # Setup
-docker-compose build
+docker-compose up --no-start
 docker-compose run frontend yarn
 docker-compose run backend bundle exec rake db:create
 docker-compose run backend bundle exec rake db:migrate
