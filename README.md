@@ -58,7 +58,7 @@ docker-compose down
 
 ## Troubleshooting
 ### Windows
-If you get the error `"bash\r" No such file or directory`.
+If you get the error `"bash\r" No such file or directory`. [Fix] (https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)
     This is because of the line-formatting difference between Unix and Windows style.
     To fix this make Git check out files with unix-style file endings on windows use:
    1. `git config --global core.autocrlf false`
