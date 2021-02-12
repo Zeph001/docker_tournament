@@ -12,7 +12,6 @@ git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournamen
 
 # Initial Setup
 docker-compose up --no-start --build
-# docker-compose run frontend npm install
 docker-compose run backend bundle exec rake db:create
 docker-compose run backend bundle exec rake db:migrate
 ```
