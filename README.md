@@ -12,8 +12,8 @@ git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournamen
 
 # Initial Setup
 docker-compose up --no-start --build
-docker-compose run backend bundle exec rake db:create
-docker-compose run backend bundle exec rake db:migrate
+docker-compose run --rm backend bundle exec rake db:create
+docker-compose run --rm backend bundle exec rake db:migrate
 ```
 ## Start
 ```shell
@@ -27,13 +27,13 @@ The project is now available on http://localhost:3000/
 #### Backend Test
 ```shell
 # First time: setup the test database
-docker exec -it backend rake db:migrate RAILS_ENV=test
+docker exec -it tournament_backend rake db:migrate RAILS_ENV=test
 
-docker exec -it backend bundle exec rspec --format documentation
+docker exec -it tournament_backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
 ```shell
-docker exec -it frontend npm test
+docker exec -it tournament_frontend npm test
 ```
 
 #### Access Database via pgadmin
@@ -72,5 +72,8 @@ docker-compose down
 
 * If you encounter further problems using windows. Please try on a x86_64-linux Platform.
 
+### Testing
+* If you get Error: No such container: backend 
+  Make sure that you are running the the containers with `docker-compose up -d`
 
 If you have troubles contact me @sdaya001 @Zeph001
