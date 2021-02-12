@@ -14,6 +14,7 @@ docker-compose up --no-start
 docker-compose run frontend yarn
 docker-compose run backend bundle exec rake db:create
 docker-compose run backend bundle exec rake db:migrate
+docker-compose run backend bundle install
 ```
 ## Start
 ```shell
