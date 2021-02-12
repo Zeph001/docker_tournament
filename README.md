@@ -56,6 +56,10 @@ docker-compose down
 ```
 
 ## Troubleshooting
+* If you get a TypeError: Cannot read property 'email' of undefined, when navigating to the Dashboard.
+  This is because you have logged in with an improper User Account
+    Logout again and use the registration panel
+
 ### Windows
 * If you get the error `'bash\r' No such file or directory`. [Fix](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)
   This is because of the line-formatting difference between Unix and Windows style.
@@ -65,9 +69,6 @@ docker-compose down
    3. `git config --global core.autocrlf true`
    4. Go to Installation Section again and continue the Setup
 
-* If you get a TypeError, when navigating to the Dashboard.
-  This is because you have logged in with an improper User Account
-    Logout again and use the register panel
 
 * If you encounter further problems using windows. Please try on a x86_64-linux Platform.
 
