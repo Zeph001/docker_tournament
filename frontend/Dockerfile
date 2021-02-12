@@ -4,7 +4,7 @@ RUN mkdir -p /myapp/frontend
 WORKDIR /myapp/frontend
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH /myapp/frontend/node_modules/.bin:$PATH
+# ENV PATH /myapp/frontend/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json package-lock.json /myapp/frontend/
