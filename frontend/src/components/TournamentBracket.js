@@ -28,7 +28,7 @@ function PopUpInput(props) {
             </div>
             <div className="popUpBtn">
               <Button as={Link}
-                      to="/dashboard" className="leavePopUpBtn">Leave</Button>
+                      to="/" className="leavePopUpBtn">Leave</Button>
             </div>
           </div>
         </Popup>
