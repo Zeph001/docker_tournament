@@ -42,14 +42,16 @@ services:
   frontend:
     container_name: frontend
     build: ./frontend
+    command: ["npm", "start"]
     volumes:
       - ./frontend:/myapp/frontend
+      - node-modules:/myapp/frontend/node_modules
     ports: 
       - "3000:3000"
-    command: "yarn start"
     depends_on:
       - backend
 
 volumes:
   db-data:
   pgadmin-data:
+  node-modules:

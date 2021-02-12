@@ -12,7 +12,7 @@ git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournamen
 
 # Initial Setup
 docker-compose up --no-start --build
-docker-compose run frontend npm
+# docker-compose run frontend npm install
 docker-compose run backend bundle exec rake db:create
 docker-compose run backend bundle exec rake db:migrate
 ```
@@ -21,7 +21,6 @@ docker-compose run backend bundle exec rake db:migrate
 # For the initial setup id recommend running docker-compose without -d so you see when the servers are done starting. Afterwards you can ctrl+c to shutdown the container and run the command with -d so the services run in the background and you can keep using the terminal. 
 docker-compose up -d
 ```
-
 The project is now available on http://localhost:3000/
 
 ## Test

@@ -9,10 +9,10 @@ ENV PATH /myapp/frontend/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json package-lock.json /myapp/frontend/
 RUN npm install --silent
-RUN npm install "react-scripts" -g --silent
 
 # add app
 COPY . /myapp/frontend
 
+EXPOSE 3000
 # start app
 CMD ["npm", "start"]   
