@@ -6,24 +6,24 @@
 
 # Installation
 ```shell
-$ git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournament
+git clone https://github.com/Zeph001/docker_tournament.git ; cd docker_tournament
 
 # Setup
-$ docker-compose build
-$ docker-compose run frontend yarn
-$ docker-compose run backend bundle exec rake db:create
-$ docker-compose run backend bundle exec rake db:migrate
+docker-compose build
+docker-compose run frontend yarn
+docker-compose run backend bundle exec rake db:create
+docker-compose run backend bundle exec rake db:migrate
 ```
 ## Start
 ```shell
 # Option -d to run the containers in the background
-$ docker-compose up -d
+docker-compose up -d
 ```
 http://localhost:3000/
 
 ## Stop
 ```shell
-$ docker-compose down
+docker-compose down
 ```
 
 #### Backend Test
@@ -35,7 +35,7 @@ docker exec -it backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
 ```shell
-$ docker exec -it frontend npm test
+docker exec -it frontend npm test
 ```
 
 #### Access Database via pgadmin
