@@ -58,7 +58,8 @@ docker-compose down
 ## Troubleshooting
 * If you get a TypeError: Cannot read property 'email' of undefined, when navigating to the Dashboard.
   This is because you have logged in with an improper User Account
-    Logout again and use the registration panel
+  1. Refresh the site
+  2. Use the registration panel
 
 ### Windows
 * If you get the error `'bash\r' No such file or directory`. [Fix](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)
