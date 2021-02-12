@@ -21,10 +21,7 @@ docker-compose up -d
 ```
 The project is now available on http://localhost:3000/
 
-## Stop
-```shell
-docker-compose down
-```
+## Test
 
 #### Backend Test
 ```shell
@@ -55,4 +52,7 @@ Save password and hit save. Connect to the server by double clicking it on the B
 
 If you have troubles contact me @sdaya001
 
-
+## Stop
+```shell
+docker-compose down
+```
