@@ -28,7 +28,6 @@ The project is now available on http://localhost:3000/
 ```shell
 # First time: setup the test database
 docker exec -it tournament_backend rake db:migrate RAILS_ENV=test
-
 docker exec -it tournament_backend bundle exec rspec --format documentation
 ```
 #### Frontend Test
