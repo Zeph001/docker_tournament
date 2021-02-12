@@ -54,7 +54,6 @@ Save password and hit save. Connect to the server by double clicking it on the B
 ```shell
 docker-compose down
 ```
-[To reset docker env](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
 
 ## Troubleshooting
 ### Windows
@@ -75,5 +74,8 @@ docker-compose down
 ### Testing
 * If you get Error: No such container: backend 
   Make sure that you are running the the containers with `docker-compose up -d`
+
+### Docker
+[To reset docker env](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
 
 If you have troubles contact me @sdaya001 @Zeph001
