@@ -100,6 +100,7 @@ updateTournamentName(e) {
       })
     }
   }
+
   handleTeamSelection(){
     let bracketSize = this.state.bracketSize
 

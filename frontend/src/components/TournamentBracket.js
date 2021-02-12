@@ -37,7 +37,7 @@ function PopUpInput(props) {
 }
 
 /**
- * This class renders the Tournament brackets with
+ * This class renders the Tournament brackets
  */
 export default class TournamentBracket extends Component {
   constructor(props) {
@@ -66,8 +66,6 @@ export default class TournamentBracket extends Component {
 
     };
     this.handleNextRound  = this.handleNextRound.bind(this)
-    console.log("received teams",this.props.location.state.receivedTeams)
-    console.log("Tournament Name", this.props.location.state.tournamentName)
   }
 
   componentWillMount() {
@@ -76,17 +74,14 @@ export default class TournamentBracket extends Component {
 
   //when the page is loaded, the input method will be called, which allocates the teams to their seats
   componentDidMount() {
-      console.log("num of seeds:",this.props.location.state.numOfSeeds)
-      console.log("num of seeds 2:",this.state.numOfSeeds)
       let arr = this.props.location.state.receivedTeams
       for (let i = 0; i < arr.length; i++) {
         const obj = arr[i];
-        console.log("received team", obj)
         this.handleInput(obj)
       }
 
   }
-  //rendering of the popUp
+
   renderInput() {
     return (
       <PopUpInput
@@ -136,15 +131,14 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  //functionality to enter key
-  //does the same thing as input button
+
   handleEnter(e) {
     if (e.key === "Enter" ) {
      this.handleInput()
     }
   }
 
-  // a random int will be given back with a max int -> max = 4 possible ints: 0, 1, 2, 3
+
   getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
@@ -156,10 +150,6 @@ export default class TournamentBracket extends Component {
     const arrLength = this.state.names.length;
     let participantAmount = parseInt(this.state.numOfSeeds); // seeds can be 4, 8, 16 (amount of participant)
     let index = this.getRandomInt(participantAmount)
-    console.log("index: ",index)
-    console.log("seeds", participantAmount)
-    console.log("new names", newNames)
-    console.log("input receives team", newTeam)
     while (newNames[index] !== undefined && this.state.stopEntries === false) { //if the seat is already given, it has to find an empty seat
             index = this.getRandomInt(participantAmount)
     }
@@ -169,7 +159,6 @@ export default class TournamentBracket extends Component {
     }
 
     if (index !== undefined && this.state.stopEntries === false) {
-      console.log("in if")
       if (newTeam !== "") {
         newNames.splice(index, 1, newTeam); //update state of names array
         this.setState({
@@ -178,24 +167,19 @@ export default class TournamentBracket extends Component {
       }
     }
 
-    console.log(arrLength)
-    console.log(this.state.names)
     // set back after input
     this.setState({
       newName: "",
     });
   }
 
-
-  //when the input is being changed, update the string of new name
   handleChangeOfInput(e) {
     const name = e.target.value;
-    console.log(e.target.value)
     this.setState({
       newName: name
     });
   }
-  //changes the tournament form
+
   handleChangeOfTournamentForm(e){
     let newTournamentForm = e.target.value;
     if(newTournamentForm === "undefined") {
@@ -231,9 +215,8 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  //updates the number of the seeds
+
   handleChangeOfBracketSize(e) {
-    console.log("in change bracket size")
     let newNum = e;
     this.setState({
       numOfSeeds: newNum,
@@ -250,7 +233,6 @@ export default class TournamentBracket extends Component {
     }
 
     if (newNum === "4") {
-      console.log("in num 4")
       //depending on the seed, fills the arrays with the correct amount of columns
       this.setState({
         names: Array(6).fill(),
@@ -268,15 +250,11 @@ export default class TournamentBracket extends Component {
     }
   }
 
-  // event handler for click on Team
-  // it decides where the winner and loser of the match goes next
+  // this function decides where the winner and loser of the match goes next
   handleNextRound(event) {
    let arrNames = this.state.names
    let idOfColumn = event.target.getAttribute('id')
-
-   console.log(idOfColumn)
    let winner = document.getElementById(idOfColumn)
-   console.log(this.state.names)
    let arrWinner = this.state.winnerArray
 
 if(winner.innerText !== "" && (this.state.singleKO
@@ -312,7 +290,7 @@ if(winner.innerText !== "" && (this.state.singleKO
     }
 
   if ((idOfColumn === "team1" || idOfColumn === "team2") && (arrNames[0] !== undefined && arrNames[1] !== undefined)){
-    console.log(this.state.doubleKO)
+
     if(this.state.numOfSeeds === "4" && this.state.doubleKO && arrNames[4] === undefined && arrNames[6] === undefined) {
       arrNames[4] = arrNames[keyLoser - 1]
       arrNames[6] = arrNames[keyWinner - 1]
@@ -480,7 +458,6 @@ if(winner.innerText !== "" && (this.state.singleKO
     })
   }
 
-  console.log(arrNames)
 } else {
   arrWinner.push(idOfColumn)
   this.setState({

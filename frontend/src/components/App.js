@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
-import Home from "./Home";
 import Dashboard from "./Dashboard";
 import axios from "axios";
 import "../css/App.css";
@@ -60,7 +59,6 @@ export default class App extends Component {
 
   handleSuccessfulAuth(data) {
     this.handleLogin(data);
-    //redirection handled in form submit
   }
 
   handleLogout() {

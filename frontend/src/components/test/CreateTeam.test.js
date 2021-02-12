@@ -8,10 +8,6 @@ import {fireEvent, render} from "@testing-library/react";
 
 configure({ adapter: new Adapter() });
 
-/**
- * I am testing primarily the components of the form
- */
-
 let container;
 let updateTournamentName;
 let wrapper
