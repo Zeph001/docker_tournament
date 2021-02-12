@@ -7,8 +7,9 @@ WORKDIR /myapp/frontend
 ENV PATH /myapp/frontend/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json /myapp/frontend/package.json
+COPY package.json yarn.lock /myapp/frontend/
 RUN yarn install --silent
+RUN yarn install "react-scripts": "^4.0.1"
 
 # add app
 COPY . /myapp/frontend
