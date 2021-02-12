@@ -43,7 +43,7 @@ export default class Login extends Component {
       .then((response) => {
         if (response.data.status) {
           this.props.handleSuccessfulAuth(response.data);
-          this.props.history.push("/dashboard")
+          this.props.history.push("/")
         }
       })
       .catch((error) => {
