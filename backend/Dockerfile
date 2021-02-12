@@ -2,6 +2,7 @@ FROM ruby:3.0.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir -p /myapp/backend
 WORKDIR /myapp/backend
+RUN gem install bundler -v 2.2.7
 COPY Gemfile Gemfile.lock /myapp/backend/
 RUN bundle install --quiet
 COPY . /myapp/backend
