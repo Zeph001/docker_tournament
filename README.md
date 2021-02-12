@@ -55,6 +55,7 @@ Save password and hit save. Connect to the server by double clicking it on the B
 ```shell
 docker-compose down
 ```
+[To reset docker env](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
 
 ## Troubleshooting
 ### Windows
