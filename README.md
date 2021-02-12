@@ -54,5 +54,17 @@ Save password and hit save. Connect to the server by double clicking it on the B
 ```shell
 docker-compose down
 ```
+## Troubleshooting
+### Windows
+If you get the error `"bash\r" No such file or directory`
+    This is because of the line-formatting difference between Unix and Windows style.
+    To fix this make Git check out files with unix-style file endings on windows use:
+   1. `git config --global core.autocrlf false`
+   2. Run git clone again
+   3. Go to Installation Section again
 
+If you get a TypeError, when navigating to the Dashboard
+    This is because you have logged in with an improper User Account
+    Logout again and use the register panel
+     
 If you have troubles contact me @sdaya001 @Zeph001
