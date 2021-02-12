@@ -16,7 +16,7 @@ docker-compose run --rm backend bundle exec rake db:create
 docker-compose run --rm backend bundle exec rake db:migrate
 ```
 ## Start
- For the initial setup I recommend running `docker-compose` up without -d so you see when the containers are done starting. Afterwards you can ctrl+c to shutdown the container and run the command with -d so the services run in the background and you can keep using the terminal.
+ For the initial setup I recommend running `docker-compose up` without -d so you see when the containers are done starting. Afterwards you can ctrl+c to shutdown the container and run the command with -d so the services run in the background and you can keep using the terminal.
 ```shell
 docker-compose up -d
 ```
